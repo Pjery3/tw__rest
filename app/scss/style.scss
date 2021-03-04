@@ -4,7 +4,6 @@
 
 .header {
     padding: 60px 0 40px;
-    margin-bottom: 25px;
     position: relative;
     min-height: 280px;
     &:before,
@@ -208,7 +207,6 @@
             right: 0;
             width: 100%;
             z-index: 15;
-
             clip-path: polygon(
                 0% 27%,
                 0% 0%,
@@ -253,8 +251,8 @@
 }
 .main-content {
     .slider {
-        background-color: #f8f8f8;
-        padding: 30px 0 20px;
+        background: url(../images/bg.png) repeat;
+        padding: 60px 0 20px;
         .container {
             max-width: 1706px;
         }
@@ -403,7 +401,7 @@
     }
     .about {
         padding: 10px 0 30px;
-        background-color: #f8f8f8;
+        background: url(../images/bg.png) repeat;
         &-inner {
             display: flex;
             justify-content: space-between;
@@ -594,6 +592,7 @@
     }
 
     .gallery {
+        padding: 30px 0 100px;
         .container {
             max-width: 1560px;
         }
@@ -748,7 +747,7 @@
                         &:before {
                             height: 35px;
                             transform: translate(-50%, -50%) rotate(0deg) translateX(-5px) skew(12deg);
-                            clip-path: polygon(0 0,100% 0, 93% 100%, 0 100%);
+                            clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%);
                             background-color: $yellow;
                             border: 1px solid $blue;
                             z-index: -1;
@@ -760,6 +759,147 @@
                             background-color: $blue;
                             clip-path: polygon();
                             z-index: -2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .review {
+        padding: 35px 0 50px;
+        background: url(../images/bg.png) repeat;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            .review-weather {
+                max-width: 394px;
+                padding-right: 25px;
+                .weather-title {
+                    margin-bottom: 50px;
+                }
+                .weather-items {
+                    display: flex;
+                    margin-bottom: 20px;
+                    .weather-item {
+                        display: flex;
+                        border: 1px solid #ccc;
+                        background-color:#fff;
+                        align-items: center;
+                        padding: 12px;
+                        width: 180px;
+                        height: 100px;
+                        margin: 2px;
+                        border-radius: 10px;
+                        color: $blue;
+                        &__img {
+                            img {
+                                width: 55px;
+                                height: 50px;
+                            }
+                        }
+
+                        &__info {
+                            font-size: 18px;
+                            line-height: 25px;
+                            text-align: right;
+                            white-space: nowrap;
+                            &-date {
+                            }
+                            &-temperature {
+                                font-size: 30px;
+                            }
+                            &-type {
+                            }
+                        }
+                    }
+                }
+                .weather-text {
+                }
+            }
+            .review-block {
+                max-width: 722px;
+                padding: 0 25px;
+                .review-title {
+                    margin-bottom: 50px;
+                }
+                .review-item {
+                    display: flex;
+                    align-items: center;
+                    &.review-item--reverse {
+                        .review-item__text {
+                            order: 1;
+                        }
+                    }
+                    &__text {
+                    }
+                    &__img {
+                        padding: 0;
+                        img {
+                        }
+                    }
+                    &.review-item_1 {
+                        .review-item__img {
+                            height: 180px;
+                            margin-left: 30px;
+                            &:before {
+                                width: 0;
+                            }
+                            &:after {
+                                height: 100%;
+                                width: 100%;
+                                transform: translate(-50%, -50%) rotate(5deg);
+                                background-color: $green;
+                            }
+                        }
+                    }
+                    &.review-item_2 {
+                        .review-item__img {
+                            height: 160px;
+                            margin-right: 30px;
+                            &:before {
+                                width: 100%;
+                                height: 100%;
+                                transform: translate(-50%, -50%) rotate(-4deg) translateX(0px) translateY(-10px);
+                                background-color: $yellow;
+                            }
+                            &:after {
+                                height: 100%;
+                                width: 100%;
+                                transform: translate(-50%, -50%) rotate(4deg) translateX(0px) translateY(0px);
+                                background-color: $blue;
+                                clip-path: polygon();
+                            }
+                        }
+                    }
+                }
+            }
+            .review-form {
+                max-width: 407px;
+                padding-left: 25px;
+                &__title {
+                    margin-bottom: 20px;
+                }
+                form {
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 15px 12px;
+                        border-radius: 7px;
+                        outline-color: #ccc;
+                        border-width: 1px;
+                    }
+                    input {
+                        
+                        margin-bottom: 20px;
+                        &::placeholder {
+                            color: #000;
+                        }
+                    }
+                    textarea {
+                        resize: none;
+                        width: 100%;
+                        &::placeholder {
+                            color: #000;
                         }
                     }
                 }

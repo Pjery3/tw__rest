@@ -1,0 +1,85 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: $text;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: "MuseoSansCyrl500";
+}
+
+.container {
+    max-width: 1550px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+    font-family: "MuseoSansCyrl700";
+}
+
+ul,
+li,
+p {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.title {
+    font-size: 36px;
+    font-family: "MuseoSansCyrl700";
+    text-transform: uppercase;
+    text-align: center;
+    color: $blue;
+    line-height: 40px;
+}
+
+button{
+    font-size: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-bg{
+    z-index: 3;
+    transition: all 0.2s;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    &:hover {
+        color: rgb(212, 245, 212);
+    }
+    &:before,
+    &:after{
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 30px;
+        transform: translate(-50%,-50%);
+    }
+    &:before{
+        background-color: $blue;
+        z-index: -2;
+    }
+    &:after{
+        background-color: $yellow;
+        z-index: -1;
+    }
+}

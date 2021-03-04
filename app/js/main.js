@@ -13,8 +13,8 @@ $(function () {
         // autoplay: true,
         speed: 1000,
     });
-    // $(".fancybox").fancybox({
-    //     openEffect: 'none',
-    //     closeEffect: 'none'
-    // });
+    $(".fancybox").fancybox({
+        openEffect: 'none',
+        closeEffect: 'none'
+    });
 });

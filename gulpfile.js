@@ -37,9 +37,10 @@ function images() {
 
 function scripts() {
     return src([
-        'app/js/main.js',
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/slick-carousel/slick/slick.js'
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+        'node_modules/slick-carousel/slick/slick.js',
+        'app/js/main.js',
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
@@ -50,6 +51,7 @@ function scripts() {
 function styles() {
     return src([
         'node_modules/normalize.css/normalize.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
         'app/scss/style.scss',
     ])
         .pipe(scss({outputStyle: 'compressed'}))

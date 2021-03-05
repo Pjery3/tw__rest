@@ -42,10 +42,21 @@
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?alvsrs');
+  src:  url('../fonts/icomoon/icomoon.eot?alvsrs#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?alvsrs') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?alvsrs') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?alvsrs#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -58,14 +69,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-phone_in_talk:before {
-  content: "\e902";
-}
 .icon-user-tie:before {
   content: "\e900";
 }
 .icon-phone:before {
   content: "\e901";
+}
+.icon-viber:before {
+  content: "\e903";
+}
+.icon-envelope-o:before {
+  content: "\f003";
 }
 .icon-check-square-o:before {
   content: "\f046";
@@ -76,6 +90,11 @@
 .icon-arrow-circle-right:before {
   content: "\f0a9";
 }
+.icon-whatsapp:before {
+  content: "\f232";
+}
 .icon-telegram:before {
   content: "\f2c6";
 }
+
+

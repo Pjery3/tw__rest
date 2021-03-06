@@ -61,6 +61,12 @@ button {
     padding: 0 25px;
     position: relative;
     text-align: center;
+    a {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
     &:hover {
         color: rgb(212, 245, 212);
     }

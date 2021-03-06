@@ -17,4 +17,25 @@ $(function () {
         openEffect: 'none',
         closeEffect: 'none'
     });
+
+    $('.header__nav-burger').on('click', function(){
+        $('.header__nav').addClass('active');
+    })
+    $('.header__nav-burger').on('click', function () {
+        var state = 1
+        return function () {
+            if (state === 1) {
+                state = 2
+                $('.header__nav').addClass('active');
+            } else if (state === 2) {
+                state = 1
+                $('.header__nav').removeClass('active');
+            }
+
+        }
+    }());
+
+    
+
+
 });

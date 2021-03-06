@@ -196,7 +196,6 @@
                             font-family: "icomoon" !important;
                             font-size: 35px;
                             color: $blue;
-                            
                         }
                     }
                     &.header-links__viber {
@@ -223,7 +222,6 @@
                             color: $blue;
                         }
                     }
-
                 }
             }
         }
@@ -240,16 +238,65 @@
         font-weight: 500;
         letter-spacing: 1px;
         height: 50px;
-
         &-wrapper {
             position: absolute;
+            display: flex;
+            align-items: center;
             background-color: $yellow;
             bottom: -10px;
             left: 0;
             right: 0;
             width: 100%;
             z-index: 15;
-            clip-path: polygon(0 0, 10% 30%, 12% 9%, 17% 21%, 26% 9%, 30% 8%, 40% 28%, 60% 13%, 80% 25%, 100% 27%, 100% 100%, 90% 90%, 80% 94%, 70% 89%, 60% 92%, 50% 90%, 40% 92%, 30% 93%,26% 80% ,20% 90%,18% 78%,10% 100%, 0% 60%);
+            clip-path: polygon(
+                0 0,
+                10% 30%,
+                12% 9%,
+                17% 21%,
+                26% 9%,
+                30% 8%,
+                40% 28%,
+                60% 13%,
+                80% 25%,
+                100% 27%,
+                100% 100%,
+                90% 90%,
+                80% 94%,
+                70% 89%,
+                60% 92%,
+                50% 90%,
+                40% 92%,
+                30% 93%,
+                26% 80%,
+                20% 90%,
+                18% 78%,
+                10% 100%,
+                0% 60%
+            );
+            .header__nav-burger {
+                display: none;
+                padding: 25px;
+                position: relative;
+                div {
+                    width: 25px;
+                    height: 3px;
+                    background-color: #222;
+                    & + div {
+                        margin-top: 5px;
+                    }
+                }
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(-10deg);
+                    background-color: $green;
+                    z-index: -1;
+                }
+            }
         }
         li {
             a {
@@ -438,7 +485,7 @@
                     padding: 0;
                     position: relative;
                     margin-bottom: 20px;
-                    img{
+                    img {
                         border: 4px solid #fff;
                     }
                     &:before {
@@ -456,6 +503,7 @@
                         padding: 10px 15px;
                         &:hover {
                             color: rgb(51, 97, 139);
+                            transform: scale(1.1);
                         }
                         &:before {
                             height: 100%;
@@ -493,7 +541,8 @@
                     }
                     .about-img {
                         max-width: 260px;
-                        img{
+                        position: relative;
+                        img {
                             border: 4px solid #fff;
                         }
                         &_1 {
@@ -514,7 +563,7 @@
                             max-width: 220px;
                             max-height: 130px;
                             top: -15px;
-                            img{
+                            img {
                                 border: none;
                             }
                             &:before {
@@ -529,12 +578,13 @@
                         }
                         .about-link {
                             a {
-                                bottom: -25px;
                                 left: 20px;
                                 padding: 10px 45px;
                                 color: #fff;
+                                position: absolute;
                                 &:hover {
                                     color: rgb(51, 97, 139);
+                                    transform: scale(1.1);
                                 }
                                 &:before {
                                     height: 100%;
@@ -561,7 +611,7 @@
                     margin-bottom: 30px;
                 }
                 &__text {
-                    margin-bottom: 15px;
+                    margin-bottom: 5px;
                     span {
                         position: relative;
                         padding-left: 15px;
@@ -580,11 +630,17 @@
                 }
                 &__link {
                     text-align: right;
+                    height: 45px;
+                    position: relative;
                     a {
                         padding: 0 35px;
                         color: #fff;
+                        bottom: 0px;
+                        right: 10%;
+                        position: absolute;
                         &:hover {
                             color: rgb(51, 97, 139);
+                            transform: scale(1.1);
                         }
                         &:before {
                             height: 30px;
@@ -608,6 +664,9 @@
                     max-height: 240px;
                     img {
                         border: 4px solid #fff;
+                    }
+                    &-wrapper {
+                        position: relative;
                     }
                     &:before {
                         height: 100%;
@@ -636,9 +695,12 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            margin-top: 50px;
             .gallery-item {
                 padding: 0 2px;
                 position: relative;
+                max-width: 410px;
+                max-height: 275px;
                 .fancybox {
                     &.gallery-fancybox {
                         img {
@@ -649,13 +711,15 @@
                         display: none;
                     }
                 }
+
                 &:first-child {
                     &:before {
                         width: 0;
                     }
                     &:after {
-                        height: 100%;
-                        width: 93%;
+                        height: 223px;
+                        max-width: 307px;
+                        width: 100%;
                         transform: translate(-50%, -50%) rotate(-6deg) translateX(-26px) translateY(4px);
                         background-color: $blue;
                         clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
@@ -687,8 +751,9 @@
                         width: 0;
                     }
                     &:after {
-                        height: 95%;
-                        width: 75%;
+                        height: 261px;
+                        max-width: 389px;
+                        width: 100%;
                         transform: translate(-50%, -50%) rotate(-3deg);
                         box-shadow: 0px 0px 10px 0px rgba(121, 121, 121, 0.631);
                         background-color: #dceae6;
@@ -717,58 +782,57 @@
                     }
                 }
                 &:nth-child(3) {
+                    z-index: 6;
+                    position: relative;
                     &:before {
-                        width: 90%;
-                        height: 85%;
+                        max-width: 328px;
+                        width: 100%;
+                        height: 195px;
                         z-index: -5;
                         background-color: #fff;
                         box-shadow: 0px 0px 5px 0px rgba(207, 207, 207, 0.631);
-                        transform: translate(-50%, -50%) rotate(-5deg) translateX(35px) translateY(-20px);
+                        transform: translate(-50%, -50%) rotate(-5deg) translateX(35px) translateY(-40px);
                     }
                     &:after {
-                        height: 95%;
-                        width: 85%;
-                        transform: translate(-50%, -50%) rotate(-6deg) translateX(-35px) translateY(-8px);
+                        height: 228px;
+                        max-width: 310px;
+                        width: 100%;
+                        transform: translate(-50%, -50%) rotate(-6deg) translateX(-35px) translateY(-18px);
                         z-index: -3;
                         background-color: $green;
                     }
                     a {
-                        left: -70px;
-                        top: -275px;
+                        left: 0px;
+                        top: 5px;
                         color: #fff;
                         &:hover {
                             color: rgb(51, 97, 139);
                         }
                         &:before {
-                            height: 40px;
                             transform: translate(-50%, -50%) rotate(0deg) translateX(-5px) skew(12deg);
-                            clip-path: polygon();
+
                             background-color: $blue;
                             border: 1px solid $blue;
-                            z-index: -1;
                         }
                         &:after {
-                            height: 35px;
-                            width: 105%;
                             transform: translate(-50%, -50%) rotate(2deg) translateY(4px) translateX(-8px);
                             background-color: $green;
-
-                            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 85%);
-                            z-index: -2;
+                            z-index: -5;
                         }
                     }
                 }
                 &:last-child {
                     &:before {
-                        height: 60%;
-                        width: 85%;
-                        transform: translate(-50%, -50%) rotate(-4deg) translateX(50px) translateY(-65px) skew(0deg);
+                        height: 176px;
+                        max-width: 335px;
+                        width: 100%;
+                        transform: translate(-50%, -50%) rotate(-4deg) translateX(50px) translateY(-55px) skew(0deg);
                         background-color: $yellow;
                     }
                     &:after {
-                        height: 90%;
-                        transform: translate(-50%, -50%) rotate(-1deg) translateX(-35px) translateY(15px);
-                        width: 80%;
+                        height: 265px;
+                        transform: translate(-50%, -50%) rotate(-1deg) translateX(-35px) translateY(45px);
+                        width: 314px;
                         box-shadow: 0px 0px 10px 0px rgba(121, 121, 121, 0.631);
                         background-color: #f6f6f6;
                     }
@@ -868,6 +932,7 @@
                     }
                     &__img {
                         padding: 0;
+                        margin-top: 20px;
                         img {
                             border: 4px solid #fff;
                         }
@@ -936,6 +1001,16 @@
                             color: #000;
                         }
                     }
+                }
+                .review-privacy-adaptive {
+                    margin-top: 40px;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border: 1px solid #999;
+                    border-radius: 10px;
+                    padding: 12px;
+                    line-height: 20px;
+                    max-width: 553px;
+                    display: none;
                 }
             }
         }

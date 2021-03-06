@@ -10,7 +10,7 @@ $(function () {
         slidesToScroll: 1,
         dots: true,
         autoplaySpeed: 5000,
-        // autoplay: true,
+        autoplay: true,
         speed: 1000,
     });
     $(".fancybox").fancybox({

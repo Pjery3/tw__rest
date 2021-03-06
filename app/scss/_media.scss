@@ -286,15 +286,14 @@
     .header__nav {
         position: absolute;
         left: -500px;
-        top: 30px;
+        top: 100%;
+        width: 50%;
         background-color: #fff;
         height: auto;
-        width: 50%;
         z-index: 10;
         transition: all 0.3s;
         letter-spacing: unset;
         overflow: hidden;
-
         li {
             width: 100%;
             text-align: left;
